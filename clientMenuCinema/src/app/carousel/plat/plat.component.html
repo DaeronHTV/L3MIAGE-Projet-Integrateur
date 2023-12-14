@@ -1,0 +1,133 @@
+<div class="page">
+    <h1>Tous les plats</h1>
+
+    <div class="filtre">
+        <label>
+          <div class="type">
+            <div class="box2">
+              <input type="radio" id="entree" name="entree" value="entree" (click)="this.srch.setType('entree')">
+              <label for="entree">
+                <h3>Entrées</h3>
+              </label>
+            </div>
+            <div class="box2">
+              <input type="radio" id="platt" name="platt" value="platt" (click)="this.srch.setType('platt')">
+              <label for="platt">
+                <h3>Plats</h3>
+              </label>
+            </div>
+            <div class="box2">
+              <input type="radio" id="dessert" name="dessert" value="dessert" (click)="this.srch.setType('dessert')">
+              <label for="dessert">
+                <h3>Desserts</h3>
+              </label>
+            </div>
+            <div class="box2">
+              <input type="radio" id="boisson" name="boisson" value="boisson" (click)="this.srch.setType('boisson')">
+              <label for="boisson">
+                <h3>Boissons</h3>
+              </label>
+            </div>
+          </div>
+        </label>
+    </div>
+    <div class="trifiltre">
+      <select name="typetri" #typetri>
+        <option value="alphaAZ">Tri par ordre Alphabétique (A-Z)</option>
+        <option value="alphaZA">Tri par ordre Alphabétique (Z-A)</option>
+        <option value="prixcro">Tri par prix croissant</option>
+        <option value="prixdesc">Tri par prix décroissant</option>
+      </select>
+      <button class="tripar" type="submit"
+        (click)="this.srch.tri_plat(typetri.value, this.srch.getPlat())">Trier</button>
+    </div>
+    <div [ngSwitch]="this.srch.getType()">
+        <div *ngSwitchDefault>
+            <ul class=plats>
+                <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Entree').listplat">
+                    <div>
+                        <img class="imagePlat" src="{{item.photo}}" />
+                        <h4>{{item.nom}}</h4>
+                        <h5>Prix: {{item.prix}} €</h5>
+                        <div *ngIf="Ingredient(item)">
+                            <h6>Ingrédients:</h6>
+                            <div class="ings">
+                                <div class="ing" *ngFor="let ing of item.ingredients">
+                                    <i>- {{ing.ingredient}} </i>
+                                </div>
+                            </div>
+                        </div>
+                        <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                        au panier</button></a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div *ngSwitchCase="'platt'">
+            <ul class=plats>
+              <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Plat').listplat">
+                <div>
+                  <img class="imagePlat" src="{{item.photo}}" />
+                  <h4>{{item.nom}}</h4>
+                  <h5>Prix: {{item.prix}} €</h5>
+                  <div *ngIf="Ingredient(item)">
+                    <h6>Ingrédients:</h6>
+                    <div class="ings">
+                      <div class="ing" *ngFor="let ing of item.ingredients">
+                        <i>- {{ing.ingredient}} </i>
+                      </div>
+                    </div>
+                  </div>
+                  <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                      au panier</button></a>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <div *ngSwitchCase="'dessert'">
+            <ul class=plats>
+              <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Dessert').listplat">
+                <div>
+                  <img class="imagePlat" src="{{item.photo}}" />
+                  <h4>{{item.nom}}</h4>
+                  <h5>Prix: {{item.prix}} €</h5>
+                  <div *ngIf="Ingredient(item)">
+                    <h6>Ingrédients:</h6>
+                    <div class="ings">
+                      <div class="ing" *ngFor="let ing of item.ingredients">
+                        <i>- {{ing.ingredient}} </i>
+                      </div>
+                    </div>
+                  </div>
+                  <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                      au panier</button></a>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <div *ngSwitchCase="'boisson'">
+            <ul class=plats ngif="Resultat()">
+              <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Boisson').listplat">
+                <div>
+                  <img class="imagePlat" src="{{item.photo}}" />
+                  <h4>{{item.nom}}</h4>
+                  <h5>Prix: {{item.prix}} €</h5>
+                  <div *ngIf="Ingredient(item)">
+                    <h6>Ingrédients:</h6>
+                    <div class="ings">
+                      <div class="ing" *ngFor="let ing of item.ingredients">
+                        <i>- {{ing.ingredient}} </i>
+                      </div>
+                    </div>
+                  </div>
+                  <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                      au panier</button></a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+    </div>

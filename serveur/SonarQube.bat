@@ -1,0 +1,1 @@
+mvn clean verify sonar:sonar -Dsonar.projectKey=l3m-integrateur-serveur -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqp_d1c13ceda17370ea00ac2ab599bffe1da0a54b58

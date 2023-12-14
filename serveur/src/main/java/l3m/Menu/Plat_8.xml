@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="8">
+    <nom>Melon et Jambon Cru</nom>
+    <type>Entree</type>
+    <prix>4.75</prix>
+    <photo>https://recettes.de/images/blogs/du-potager-a-la-marmite/melon-et-jambon-cru-idee-de-presentation-n-2.640x480.jpg</photo>
+    <ingredients>Melon</ingredients>
+    <ingredients>Jambon Cru</ingredients>
+</plat>

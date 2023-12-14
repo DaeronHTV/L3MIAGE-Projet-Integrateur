@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="21">
+    <nom>Tiramisu au Spéculoos</nom>
+    <type>Dessert</type>
+    <prix>5.2</prix>
+    <photo>https://odelices.ouest-france.fr/images/recettes/tiramisu_aux_speculoos-970x1024.jpg</photo>
+    <ingredients>Mascarpone</ingredients>
+    <ingredients>Cafe</ingredients>
+    <ingredients>Spéculoos</ingredients>
+</plat>

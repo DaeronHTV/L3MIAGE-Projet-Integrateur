@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="48">
+    <nom>Piña Colada</nom>
+    <type>Boisson</type>
+    <prix>6.5</prix>
+    <photo>https://t2.uc.ltmcdn.com/fr/images/4/3/1/comment_faire_une_pina_colada_sans_alcool_1134_orig.jpg</photo>
+    <ingredients>Rhum</ingredients>
+    <ingredients>Jus d'Ananas</ingredients>
+    <ingredients>Crème Coco</ingredients>
+</plat>

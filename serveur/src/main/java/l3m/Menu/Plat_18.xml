@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="18">
+    <nom>Sushi</nom>
+    <type>Plat</type>
+    <prix>4.9</prix>
+    <photo>https://www.atelierdeschefs.com/media/recette-e12941-sushi-de-saumon-fume-et-creme-acidulee.jpg</photo>
+    <ingredients>Riz</ingredients>
+    <ingredients>Saumon</ingredients>
+</plat>

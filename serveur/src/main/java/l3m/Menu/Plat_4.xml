@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="4">
+    <nom>Samoussas aux crevettes et au piment X5</nom>
+    <type>Entree</type>
+    <prix>5.0</prix>
+    <photo>https://img.cuisineaz.com/400x320/2016-03-06/i37644-samoussa-au-saumon-cream-cheese-et-roquette.jpg</photo>
+    <ingredients>Crevette</ingredients>
+    <ingredients>Piment</ingredients>
+</plat>

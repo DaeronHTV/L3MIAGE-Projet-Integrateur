@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="0">
+    <nom>Salade De Thon</nom>
+    <type>Entree</type>
+    <prix>6.5</prix>
+    <photo>https://cdn.pratico-pratiques.com/app/uploads/sites/2/2018/08/29095920/salade-nicoise-au-thon.jpeg</photo>
+    <ingredients>Salade</ingredients>
+    <ingredients>Thon</ingredients>
+    <ingredients>Pomme de Terre</ingredients>
+    <ingredients>Tomate</ingredients>
+    <ingredients>Olive</ingredients>
+    <ingredients>Oeuf</ingredients>
+</plat>

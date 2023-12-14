@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="5">
+    <nom>Salade de pâtes</nom>
+    <type>Entree</type>
+    <prix>5.0</prix>
+    <photo>https://static.750g.com/images/600-600/9e6558fd7bd4d5cb7e45ce48f0c3d39f/comment-faire-une-salade-de-pates-comme-en-italie.jpg</photo>
+    <ingredients>Pates</ingredients>
+    <ingredients>Mozzarella</ingredients>
+    <ingredients>Tomate</ingredients>
+    <ingredients>Olive</ingredients>
+</plat>

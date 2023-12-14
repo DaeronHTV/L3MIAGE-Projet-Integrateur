@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="2">
+    <nom>Salade à l'Italienne</nom>
+    <type>Entree</type>
+    <prix>6.5</prix>
+    <photo>https://www.menusalacartedezoe.com/wp-content/uploads/2018/06/Salade-italienne-roquette-et-coppa-3.jpg</photo>
+    <ingredients>Salade</ingredients>
+    <ingredients>Jambon Cru</ingredients>
+    <ingredients>Tomate</ingredients>
+    <ingredients>Parmesan</ingredients>
+</plat>

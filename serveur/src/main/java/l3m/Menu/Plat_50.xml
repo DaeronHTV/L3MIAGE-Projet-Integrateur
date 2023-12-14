@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="50">
+    <nom>Cocktail Paradise Dream</nom>
+    <type>Boisson</type>
+    <prix>5.9</prix>
+    <photo>https://ekladata.com/_fyIyzLGMXpDJZnSbyLAY1EAFUM.png</photo>
+    <ingredients>Jus d'Ananas</ingredients>
+    <ingredients>Fraises</ingredients>
+    <ingredients>Framboise</ingredients>
+    <ingredients>Grenadine</ingredients>
+    <ingredients>Pêche</ingredients>
+</plat>

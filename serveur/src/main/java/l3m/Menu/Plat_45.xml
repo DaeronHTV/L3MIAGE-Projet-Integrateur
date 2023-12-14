@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="45">
+    <nom>Mojito</nom>
+    <type>Boisson</type>
+    <prix>6.5</prix>
+    <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6Lrs4kWlsP2Li9qJ5jJ5gQ3l0Xvz3DZjrL3CWJPoRwOP4ULYz&amp;usqp=CAU</photo>
+    <ingredients>Rhum</ingredients>
+    <ingredients>Menthe</ingredients>
+    <ingredients>Eau gazeuse</ingredients>
+    <ingredients>Citron</ingredients>
+    <ingredients>Sucre</ingredients>
+</plat>

@@ -1,0 +1,21 @@
+.page {margin-top: 20px; text-align: center;}
+.panier{border: 3px solid rgb(226, 149, 62); background-color: white;margin: auto;margin-bottom: 10px; }
+td, th {border: thin solid rgb(69, 78, 87); }
+.lign1{font-size:17px;color: white; background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);border: black;}
+.col1{position:relative;width: 230px;}
+.col2{position:relative;width: 90px;}
+.col3{position:relative;width: 200px;}
+.col4, .col5, .col6{position:relative;width: 100px;}
+.image{margin:5px; width: 200px; height: 165px;}
+.quantite{margin-left: 5px;margin-right: 5px;width:15px; height: 15px;}
+.poubelle{margin:5px; width: 25px; height: 25px;}
+.button{margin-bottom:10px;margin-top:10px; width: 240px;color: white;background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);border: black;}
+.button2{margin-bottom:10px;margin-top:10px; margin-right: 10px;width: 240px;color: white;background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);border: black;}
+.alert{font-size: 30px;align-content: center;margin-top: 10px;}
+.info{margin-bottom: 20px; margin-top: 20px;font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+    line-height: 25px;
+    }
+.info b{margin-bottom: 20px; margin-top: 20px;font-size: 30px;font-family: 'Lobster';}
+h1{ font-family: 'Nova Flat';font-size: 30px;}
+.butDisabled { background-image: linear-gradient(to bottom, #2e3f4c 0%, #333A40 100%);}

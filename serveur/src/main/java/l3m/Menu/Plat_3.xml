@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="3">
+    <nom>Quiche Lorraine</nom>
+    <type>Entree</type>
+    <prix>3.5</prix>
+    <photo>https://www.regilait.com/wp-content/uploads/Recette-de-quiche-lorraine.jpg</photo>
+    <ingredients>Salade</ingredients>
+    <ingredients>Jambon Cru</ingredients>
+    <ingredients>Tomate</ingredients>
+    <ingredients>Parmesan</ingredients>
+</plat>

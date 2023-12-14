@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="14">
+    <nom>Lasagnes</nom>
+    <type>Plat</type>
+    <prix>9.5</prix>
+    <photo>https://img.cuisineaz.com/400x320/2016-11-14/i19403-lasgnes-bolognaise-facile.jpg</photo>
+    <ingredients>Pates de lasagnes</ingredients>
+    <ingredients>Tomate</ingredients>
+    <ingredients>Viande hachée</ingredients>
+    <ingredients>Béchamel</ingredients>
+    <ingredients>Gruyère</ingredients>
+</plat>

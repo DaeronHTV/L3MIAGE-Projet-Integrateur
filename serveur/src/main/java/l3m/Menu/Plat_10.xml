@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="10">
+    <nom>Pizza Margherita</nom>
+    <type>Plat</type>
+    <prix>8.9</prix>
+    <photo>https://www.bofrost.fr/medias/xpizza-margherita-09146-1.jpg-W720xH450R1.6,qcontext=bWFzdGVyfHByb2R1Y3QtaW1hZ2VzfDQ1MjEyOXxpbWFnZS9qcGVnfHByb2R1Y3QtaW1hZ2VzL2g2MS9oYWQvODgxNTg5NTI0ODkyNi5qcGd8ZGNkNGJmZGQ4N2Q3NmVkZjBiNTQ2OTA2Mzg5ZWI3MmEwMGU2NjgyYzYyMGIxMzNkMjg2ZDJhNTZhYzU3NGUzOQ.pagespeed.ic.4bC4smJbNR.jpg</photo>
+    <ingredients>Sauce tomate</ingredients>
+    <ingredients>Mozzarella</ingredients>
+    <ingredients>Olive</ingredients>
+    <ingredients>Origan</ingredients>
+</plat>

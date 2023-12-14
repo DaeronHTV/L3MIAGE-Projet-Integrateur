@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="33">
+    <nom>Salade de Fruits</nom>
+    <type>Dessert</type>
+    <prix>4.9</prix>
+    <photo>https://cdn.pratico-pratiques.com/app/uploads/sites/3/2019/11/27115447/salade-de-fruits.jpg</photo>
+    <ingredients>Cerise</ingredients>
+    <ingredients>Kiwi</ingredients>
+    <ingredients>Banane</ingredients>
+    <ingredients>Raisin</ingredients>
+    <ingredients>Framboise</ingredients>
+    <ingredients>Pomme</ingredients>
+</plat>

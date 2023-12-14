@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="17">
+    <nom>Couscous</nom>
+    <type>Plat</type>
+    <prix>9.9</prix>
+    <photo>https://cache.marieclaire.fr/data/photo/w1000_c17/cuisine/4l/couscous-facile.jpg</photo>
+    <ingredients>Semoule</ingredients>
+    <ingredients>Poulet</ingredients>
+    <ingredients>Merguez</ingredients>
+    <ingredients>Tomate</ingredients>
+    <ingredients>Carotte</ingredients>
+    <ingredients>Navets</ingredients>
+    <ingredients>Courgettes</ingredients>
+    <ingredients>Pois chiches</ingredients>
+</plat>

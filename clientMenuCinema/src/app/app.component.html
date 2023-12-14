@@ -1,0 +1,59 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header class="w-100">
+  <img src="http://ekladata.com/xrJ2qkkWcVuAdtQyS7CbvB9J0Nk/MenuCinemalogo.png" alt="MenuCinema" title="Logo du site" [routerLink]="['']"/>
+  <div class="contenu">
+    <select name="categorie" #categorie>
+        <option value="film">Film</option>
+        <option value="serie">Séries</option>
+        <option value="plat">Plat</option>
+    </select>
+      <input name="searchbar" type="search" #searchbar/>
+      <button class="search" type="submit" (click)="Reasearch(searchbar.value, categorie.value)" [routerLink]="['/queryresult']">Rechercher
+      <img class="loupe" src="https://cdn.pixabay.com/photo/2019/05/07/15/07/magnifying-glass-4186151_960_720.png"/></button>
+  </div>
+  <app-login></app-login>
+</header>
+
+<main>
+  
+  
+<router-outlet></router-outlet>
+
+</main>
+
+<footer>
+  <div>
+      <section>
+          <h5 title="Groupe N°1">les membres du groupe</h5>
+          <ul>
+            <li><b>AVANZINO</b> Aurélien</li>
+            <li><b>ENTRESSANGLE</b> Loïc</li>
+            <li><b>GOURDON</b> Stéphanie</li>
+            <li><b>OUBARI</b> Mohammad</li>
+            <li><b>VARINIER</b> Rémy</li>
+          </ul>
+      </section>
+      <section>
+          <h5>Moyens de Paiement</h5>
+          <ul>
+            <img class="bande" src="https://upload.wikimedia.org/wikipedia/fr/thumb/7/72/Logo_GIE-CB.jpg/1200px-Logo_GIE-CB.jpg" title="Carte Bancaire" alt="Carte Bancaire"/>
+            <img src="https://www.leclubargent.com/wp-content/uploads/2018/08/logo-paypal.jpg" title="Paypal" alt="Paypal"/>
+          </ul>
+          <ul> 
+            <img class="bande" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRRpiIm8KuJvbBhTJH1aoQPpmVEPE5gIaQu9hA6sFpD8O0hA7hz&usqp=CAU" title="Visa" alt="Visa"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png" title="MasterCard" alt="MasterCard"/>
+          </ul>
+      </section>
+      <section>
+          <h5>Besoins d'aide</h5>
+          <ul>
+            <li>F.A.Q</li>
+            <li><a href="" title="Et ça marche !" [routerLink]="['/contact']">Nous contacter</a></li>
+            <li></li>
+          </ul>
+      </section>
+  </div>
+  <section>
+      <p><span id="left" title="Parce que c'est stylé de mettre ça !">©Janvier 2020: UGA Valence - All rights reserved</span></p>
+  </section>
+</footer>

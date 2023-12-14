@@ -1,0 +1,80 @@
+<div id="retAcc" [routerLink]="['']">Retour à l'accueil</div>
+<router-outlet></router-outlet>
+
+<!--
+  <div class="filtre">
+    <label>
+      <div class="categories">
+        <div class="box">
+          <input type="radio" id="film" name="film" value="film" (click)="setType('populaire')">
+          <label for="film">
+            <h2>Populaires</h2>
+          </label>
+          <input type="radio" id="serie" name="serie" value="serie" (click)="setType('note')">
+          <label for="serie">
+            <h2>Mieux Notés</h2>
+          </label>
+        </div>
+      </div>
+    </label>
+  </div>-->
+
+<div class="page">
+  <h1 *ngIf="getType() === 'populaire'">Les Films Populaires</h1>
+  <h1 *ngIf="getType() === 'note'">Les Films Mieux Notés</h1>
+  <div>
+      <ul class=items>
+        <div *ngFor="let item of listmovie">
+          <div class="card">
+            <div class="contenant">
+              <img *ngIf="PosterPicture(item)"
+                src="https://image.tmdb.org/t/p/original{{item.poster_path}}" height="200" width="150">
+              <div class="texte_centrer" *ngIf="OriginalLanguage(item)">
+                <h6>{{item.original_language}}</h6>
+              </div>
+              <img *ngIf="!PosterPicture(item)"
+                src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png" height="200" width="150" />
+            </div>
+            <div class="card-content">
+              <h6>{{item.title}}</h6>
+              <li *ngIf="Adult(item)">
+                <img class="poster"
+                  src="https://st4.depositphotos.com/3047529/28513/i/450/depositphotos_285133834-stock-photo-age-restriction-sign.jpg"
+                  alt="adultes" height="30" width="30" />
+              </li>
+              <p *ngIf="Description(item)">{{item.overview}}</p>
+              <p *ngIf="!Description(item)">Pas de description disponible.</p>
+              <ul>
+                <li *ngIf="PublishedYear(item)">Date de sortie : {{item.release_date}}</li>
+                <li *ngIf="!PublishedYear(item)">Date de sortie : Non définie</li>
+                <li *ngIf="Vote(item)">
+                  <p>Note : <ng-template #t let-fill="fill">
+                      <span class="star" [class.full]="fill === 100">
+                        <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                      </span>
+                    </ng-template>
+                    <ngb-rating [(rate)]="item.vote_average" [starTemplate]="t" [readonly]="true" [max]="10">
+                    </ngb-rating>
+
+                  </p>
+                </li>
+                <li *ngIf="!Vote(item)">Note : Non noté</li>
+              </ul>
+            </div>
+            <button type="submit" (click)="setMovie(item)" [routerLink]="['/details']">Lire plus</button>
+          </div>
+        </div>
+      </ul>
+      <div class="pagination1">
+        <div class=pagination>
+          <a (click)="setCurrentPage(this.currentpage-5)">
+            <<</a> <a (click)="setCurrentPage(this.currentpage-1)">Précédent
+          </a>
+          <!--<a class="active" href="#">1</a>-->
+          <a *ngFor="let item of pages" (click)="setCurrentPage(item)">{{item}}</a>
+          <a (click)="setCurrentPage(this.currentpage+1)">Suivant</a>
+          <a (click)="setCurrentPage(this.currentpage+5)">>></a>
+        </div>
+      </div>
+  </div>
+</div>

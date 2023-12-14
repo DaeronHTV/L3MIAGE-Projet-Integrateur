@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="16">
+    <nom>Tartiflette</nom>
+    <type>Plat</type>
+    <prix>11.5</prix>
+    <photo>https://www.cuisine-blog.fr/wp-content/uploads/2017/11/fotolia_60240140_subscription_xxl.jpg</photo>
+    <ingredients>Pomme de Terre</ingredients>
+    <ingredients>Lardons</ingredients>
+    <ingredients>Reblochon</ingredients>
+</plat>

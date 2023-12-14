@@ -1,0 +1,118 @@
+<div *ngIf="this.commandeSaved == false" class="page">
+    <h1>Votre panier</h1>
+    <table class="panier">
+      <tr class="lign1">
+        <th class="col1"> Photo </th>
+        <th class="col2"> Référence </th>
+        <th class="col3"> Nom </th>
+        <th class="col4"> Quantité </th>
+        <th class="col5"> Option </th>
+        <th class="col6"> Sous-Total </th>
+      </tr>
+      <tr *ngFor="let item of items">
+        <td>
+          <img *ngIf="isPlat(item)" class="image" src={{item.product.photo}} />
+          <img *ngIf="isFilm(item) || isSerie(item)" class="image"
+            src="https://image.tmdb.org/t/p/original{{item.product.poster_path}}" />
+    
+        </td>
+        <td>{{item.product.id}}</td>
+        <td><b>{{item.product.nom || item.product.title || item.product.name }}</b>
+          <p *ngIf="isFilm(item) || isSerie(item)">{{price}} €</p>
+          <p *ngIf="isPlat(item)">{{item.product.prix}} €</p>
+        </td>
+        <td>
+          <a *ngIf="item.quantity > 0" (click)="quantiteDown(item.product.id)">
+            <img class="quantite"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROcnhWM0HMmEeK8l3dW9mClUwhfemgHKcH_BUWHY3K_YrPWRXu&usqp=CAU" />
+          </a>
+          {{item.quantity}}
+          <a (click)="quantiteUP(item.product.id)">
+            <img class="quantite"
+              src="https://www.superprof.fr/ressources/wp-content/uploads/2011/04/addition-symbole-image.jpg" />
+          </a>
+        </td>
+        <td align="center">
+          <a (click)="remove(item.product.id)"><button type="delete">
+              <img class="poubelle"
+                src="https://us.123rf.com/450wm/faysalfarhan/faysalfarhan1711/faysalfarhan171103054/89028253-ic%C3%B4ne-de-corbeille-isol%C3%A9-sur-fond-rond-brun-illustration-abstraite-de-bouton.jpg?ver=6" />
+            </button></a>
+        </td>
+        <td *ngIf="isFilm(item) || isSerie(item)">{{ price * item.quantity}} €</td>
+        <td *ngIf="isPlat(item)">{{ item.product.prix * item.quantity}} €</td>
+      </tr>
+      <tr>
+        <td colspan="5" align="center">Total de la commande</td>
+        <td><b>{{total}} €</b></td>
+      </tr>
+    
+    </table>
+    <div *ngIf="!(alreadyLogged | async)"  class="alert alert-warning" >Veuillez vous connecter pour enregistrer votre commande</div>
+    <span *ngIf="(clientObs | async) as client">
+      <span *ngIf="(client.nom == undefined || client.prenom == undefined || client.adresse == undefined || client.tel == undefined)" class="alert alert-warning"  >Veuillez remplir toutes vos informations dans votre profil pour enregsitrer votre commande</span><br/>
+      <button 
+        *ngIf="itemSize() != 0  && (alreadyLogged | async)" 
+        [disabled]="client.nom == undefined || client.prenom == undefined || client.adresse == undefined || client.tel == undefined" 
+        href="#top" 
+        class="button2"
+        [ngClass]="{butDisabled : (client.nom == undefined || client.prenom == undefined || client.adresse == undefined || client.tel == undefined) }" 
+        (click)="saveCommande()">
+          Enregistrer la commande
+      </button>
+    </span>
+    <a [routerLink]="['']" href="#top"> <button class="button">Ajouter d'autres éléments</button></a>
+    
+    </div>
+    
+    <div *ngIf="this.commandeSaved == true && (clientObs | async) as client" class="page">
+    
+    <div class="alert alert-success"> Félicitations, votre commande a bien été enregistrée !</div>
+    <div class="info">
+      <b>Informations de commande : </b><br />
+      Commande passée le {{date_commande()}}<br />
+    </div>
+    
+    <table class="panier">
+      <tr class="lign1">
+        <th class="col3"> Nom </th>
+        <th class="col4"> Prix </th>
+        <th class="col5"> Quantité </th>
+        <th class="col6"> Sous-Total </th>
+      </tr>
+    
+      <tr *ngFor="let item of items">
+    
+        <td><b>{{item.product.nom || item.product.title || item.product.name }}</b></td>
+        <td>
+          <p *ngIf="isFilm(item) || isSerie(item)">{{price}} €</p>
+          <p *ngIf="isPlat(item)">{{item.product.prix}} €</p>
+        </td>
+    
+        <td>X {{item.quantity}}</td>
+    
+        <td *ngIf="isFilm(item) || isSerie(item)">{{ price * item.quantity}} €</td>
+        <td *ngIf="isPlat(item)">{{ item.product.prix * item.quantity}} €</td>
+    
+      </tr>
+    
+      <tr>
+        <td colspan="3" align="center">Total de la commande</td>
+        <td><b>{{total}} €</b></td>
+      </tr>
+    
+    </table>
+    <div class="info">
+      <b>Informations de livraison : </b><br />
+      Nom : {{client.nom}} <br />
+      Prénom :  {{client.prenom}} <br />
+      E-mail :  {{client.email}} <br />
+      Téléphone :  {{client.tel}} <br />
+      Adresse De Livraison :  {{client.adresse}} <br />
+    </div>
+    <a [routerLink]="['']" href="#top">
+      <button class="button2">Retour à la page d'accueil</button>
+    </a>
+    <button class="button" (click)="getFacture()">Télécharger la facture</button>
+    
+    </div>
+    

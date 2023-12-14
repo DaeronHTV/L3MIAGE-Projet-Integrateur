@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="53">
+    <nom>Cocktail Koyo</nom>
+    <type>Boisson</type>
+    <prix>5.70</prix>
+    <photo>./Photo/Koyo.jpg</photo>
+    <ingredients>Jus d'Ananas</ingredients>
+    <ingredients>Fraises</ingredients>
+    <ingredients>Melon</ingredients>
+    <ingredients>Banane</ingredients>
+    <ingredients>Vanille</ingredients>
+</plat>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="7">
+    <nom>Carottes rapées</nom>
+    <type>Entree</type>
+    <prix>3.5</prix>
+    <photo>https://epicetoorecettes.fr/img/recettes/grande/recette-carottes-rap-es-au-carvi.jpg</photo>
+    <ingredients>Pomme de Terre</ingredients>
+    <ingredients>Carotte</ingredients>
+    <ingredients>Petit pois</ingredients>
+    <ingredients>Haricot vert</ingredients>
+</plat>

@@ -1,0 +1,27 @@
+<h2>Historique des commandes</h2>
+<ngb-accordion [closeOthers]="true">
+    <ngb-panel *ngFor="let comm of (clientObs | async).commandes">
+        <ng-template ngbPanelTitle>
+            <span>{{ comm.date }}</span>
+        </ng-template>
+        <ng-template ngbPanelContent>
+            Prix de la commande : {{ comm.prix }} €
+            <br>
+            Adresse de livraison: {{ (clientObs | async).adresse }}
+            <br>
+            <span *ngIf="comm.idFilms.length != 0" >
+                Film :
+                <ul>
+                    <li *ngFor="let film of comm.idFilms">{{getNameOfFilm(film)}} </li>
+                </ul>
+            </span>
+            <span *ngIf="comm.idPlats.length != 0" >
+                Plats :
+                <ul>
+                    <li *ngFor="let plat of comm.idPlats">{{getNameOfPlat(plat)}}</li>
+                </ul>
+            </span>
+            <button (click)="getFacture(comm.id)" >Télécharger la facture de la commande</button>
+        </ng-template>
+    </ngb-panel>
+</ngb-accordion>

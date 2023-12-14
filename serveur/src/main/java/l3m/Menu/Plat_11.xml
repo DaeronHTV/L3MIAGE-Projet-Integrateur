@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="11">
+    <nom>Pizza 4 fromages</nom>
+    <type>Plat</type>
+    <prix>10.5</prix>
+    <photo>https://recette.supertoinette.com/152868/b/pizza-4-fromages.jpg</photo>
+    <ingredients>Sauce tomate</ingredients>
+    <ingredients>Parmesan</ingredients>
+    <ingredients>Mozzarella</ingredients>
+    <ingredients>Gorgonzola</ingredients>
+    <ingredients>Chèvre</ingredients>
+</plat>

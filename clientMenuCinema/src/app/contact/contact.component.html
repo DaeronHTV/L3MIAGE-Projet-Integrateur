@@ -1,0 +1,25 @@
+<div id="contact_content">
+    <div id="infomap">
+
+    </div>
+    <div *ngIf="!Envoye()" id="formulaire">
+        <h2>Nous Contacter</h2>
+        <hr>
+        <p>Un soucis par rapport au site ou tous autre </p>
+        <div>
+            <p>Adresse Mail :</p>
+            <input type="email" name="mail" #mail/>
+            <p>Sujet de votre contact :</p>
+            <input type="text" name="subject" #subject/>
+            <p>Votre message : </p>
+            <textarea name="description" #description></textarea>
+            <button type="submit" (click)="setEnvoye(true)">Envoyer</button>
+            <p>*Votre </p>
+        </div>
+    </div>
+    <div *ngIf="Envoye()" id="formulaire">
+        <h2>Votre message a bien été envoyé !</h2>
+        <p>Nous étudierons votre message dans les plus brefs délais afin de vous apportez</p>
+        <a [routerLink]="['']">Retournez à l'accueil</a> 
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<facture id="5">
+    <date>2020/05/04 15:57:35</date>
+    <nom>Varinier</nom>
+    <prénom>Rémy</prénom>
+    <adresse>2 allée Claude Nougaro 26700 Pierrelatte</adresse>
+    <email>undefined</email>
+    <Téléphone>0695017902</Téléphone>
+    <plats/>
+    <films>
+        <film>Ad Astra   : 3.75 €</film>
+    </films>
+    <prix>3.75 €</prix>
+</facture>

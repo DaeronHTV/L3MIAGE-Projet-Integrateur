@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="6">
+    <nom>Macédoine de légumes</nom>
+    <type>Entree</type>
+    <prix>5.0</prix>
+    <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbqchouKgL2N7SILowKzUo3CiNTR4RDJ51NZJpXV78Yo-KNY4v&amp;usqp=CAU</photo>
+    <ingredients>Pomme de Terre</ingredients>
+    <ingredients>Carotte</ingredients>
+    <ingredients>Petit pois</ingredients>
+    <ingredients>Haricot vert</ingredients>
+</plat>

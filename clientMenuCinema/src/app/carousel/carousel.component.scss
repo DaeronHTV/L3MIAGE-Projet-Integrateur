@@ -1,0 +1,114 @@
+/*Polices spéciales*/
+@font-face{font-family: "Adventure";src: url('../package/font/Adventure.otf') format('truetype');}
+@font-face{font-family: "StarWars";src: url('../package/font/Starjedi.ttf') format('truetype');}
+@font-face{font-family: "Doom";src: url('../package/font/AmazDooMLeft.ttf') format('truetype');}
+@font-face{font-family: "DoomIcon";src: url('../package/font/Doom\ And\ Gloom.ttf') format('truetype');}
+
+.carousel{
+    background:white;
+    h2{
+        margin-top: 15px;
+        font-family: Adventure;
+        height: 40px;
+        margin-bottom: -25px;
+    }
+}
+.car-items{
+    list-style: none;
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    margin-top: 20px;
+    .car-item{
+        min-width: 400px;
+        height: 260px;
+        flex: 1 0 250px;
+        margin-left: 1rem;
+        scroll-snap-align: start;
+        .card2{
+            border: 3px solid rgb(226, 149, 62);
+            border-radius: 3px;
+            button{
+                min-width: 395px;
+                height: 255px;
+                margin: 0;
+                padding: 0;
+                background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+                font-family: Doom;
+                font-size: xx-large;
+                color: white;
+            }
+            .button:hover{
+                background: #729EBF;
+            }
+        }
+        .card{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-column-gap: 10px;
+            border: 3px solid rgb(226, 149, 62);
+            border-radius: 3px;
+            img{
+                width: 150px;
+                height: 225px;
+            }
+            button{
+                margin-top: 5px;
+                width: 150px;
+                color: white;
+                background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+                border:black;
+                font-family: StarWars;
+            }
+            button:hover{
+                background: #729EBF;
+            }
+            .card-content {
+                margin-top:10px;
+                text-align:center;
+                max-height: 220px;
+                p, span, li{font-size: small;}
+                ul{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                p, blockquote{
+                    max-height: 75px;
+                    overflow-y: hidden;
+                    margin-bottom: 4px;
+                }
+                blockquote{
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+
+
+::-webkit-scrollbar-track{background-color: #F5F5F5;}
+::-webkit-scrollbar{height: 6px;background-color: #F5F5F5;}
+::-webkit-scrollbar-thumb{background-color: #3d4852;border-radius: 3px;}
+
+
+
+
+
+h6{font-style: italic;font-weight: bold;font-size: large;}
+.star {position: relative;display: inline-block;font-size: 4rem}
+.full {color: red;}
+.half {position: absolute;display: inline-block;overflow: hidden;color: red;bottom: 5%;}
+.ingredient{height: 40px;overflow-y: hidden;}
+.image{margin:1px;}
+
+.contenu{text-align:center;max-height: 220px;margin-top: 45px;}
+.contenu ul{list-style: none;margin: 0;padding: 0;}
+.contenu p{max-height: 75px;overflow-y: hidden;margin-bottom: 4px;}
+.contenu{p, span, li{font-size: small;}}
+
+.contenu2{text-align:center;max-height: 220px;margin-top: 70px;}
+.contenu2 ul{list-style: none;margin: 0;padding: 0;}
+.contenu2 p{max-height: 75px;overflow-y: hidden;margin-bottom: 4px;}
+.contenu2{p, span, li{font-size: small;}}

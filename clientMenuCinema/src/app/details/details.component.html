@@ -1,0 +1,198 @@
+<div id="retAcc" [routerLink]="['']">Retour à l'accueil</div>
+<!--description pour un film-->
+<div *ngIf="this.det.getType() === 'film'">
+    <div id="Desc_rapide">
+        <div id="backpicture">
+            <img *ngIf="!BackPicture(getMovie())" src="http://ekladata.com/la38o83JJQGb-8vyiv6b5g5Mih0/images.png"/>
+            <img *ngIf="BackPicture(getMovie())" src="https://image.tmdb.org/t/p/original{{this.det.getMovie().backdrop_path}}"/>
+        </div>
+        <section id="ficheproduit">
+            <div>
+                <img class="affiche" *ngIf="PosterPicture(getMovie())" 
+                src="https://image.tmdb.org/t/p/original{{getMovie().poster_path}}" alt="image"/>
+                <img class="affiche" *ngIf="!PosterPicture(getMovie())"
+                src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png" alt="image not available"/>
+            </div>
+            <div>
+                <h4>{{this.det.getMovie().title}}</h4>
+                <ul class="list">
+                    <p>{{this.det.getMovie().release_date}}</p>
+                    <li *ngFor="let obj of getMovie().genres">{{obj.name}}</li>
+                    <li *ngIf="HaveDuration(getMovie())">Durée : {{this.det.getMovie().runtime}} min</li>
+                </ul>
+                <p *ngIf="HaveVoteCount(getMovie())"><ng-template #t let-fill="fill">
+                    <span class="star" [class.full]="fill === 100">
+                    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                    </span>
+                    </ng-template>
+                    <ngb-rating [(rate)]="getMovie().vote_average" [starTemplate]="t" [readonly]="true" [max]="10"></ngb-rating><br/>
+                    (total de vote : {{this.det.getMovie().vote_count}} )
+                </p>
+                <p *ngIf="!HaveVoteCount(getMovie())">Note : non noté </p>
+                <p><b>Prix : 3.75 €</b></p>
+                <h5>Synopsis : </h5>
+                <p *ngIf="HaveDescription(getMovie())">{{this.det.getMovie().overview}}</p>
+                <p *ngIf="!HaveDescription(getMovie())">résumer indisponible</p>
+                <h5> Information sur le film: </h5>
+                <ul class="info">
+                    <li *ngIf="HaveBudget(getMovie())"><p>Budget du film: <br/>{{this.det.getMovie().budget}} $</p></li>
+                </ul>
+                <button id="reglcommande" [routerLink]="['/cart', { id:getMovie().id +'-film' }]">Ajouter au panier</button>
+            </div>
+        </section>
+    </div>
+    <div class="fourretout"></div>
+    
+    <div id="details">
+        <div id="casting" *ngIf="getCastingMovie().length !== 0">
+            <h2>Casting du film :</h2>
+            <section>
+                <ul>
+                    <li *ngFor="let item of getCastingMovie()">
+                        <div class="card">
+                            <img *ngIf="FacePicture(item)" src="https://image.tmdb.org/t/p/w220_and_h330_face{{item.profile_path}}" />
+                            <img *ngIf="!FacePicture(item)" src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png"/>
+                            <div>
+                                <h6>{{item.name}}</h6>
+                                <p>{{item.character}}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="commentaire" *ngIf="getReviewsMovie().results.length !== 0">
+            <h2>Les commentaires :</h2>
+            <section>
+                <ul>
+                    <li *ngFor="let item of getReviewsMovie().results | slice:0:4">
+                        <img src="http://ekladata.com/52mR5fDUU4r8nkwWtJM2-j66gJQ/84164525-homme-personnage-visage-avatar-male-dessin-anime-vector-illustration.jpg"/>
+                        <h4>{{item.author}}</h4>
+                        <p class="content"><em>{{item.content}}</em></p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div *ngIf="getRecommandedMovie().length !==0" id="Carrousel">
+            <h2>Vous aimez ce film ? Vous aimerez peut-être :</h2>
+            <hr>
+            <section>
+                <ul>
+                    <li *ngFor="let item of getRecommandedMovie()">
+                        <div class="card">
+                            <img *ngIf="PosterPicture(item)" src="https://image.tmdb.org/t/p/original{{item.poster_path}}" />
+                            <img *ngIf="!PosterPicture(item)" src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png"/>
+                            <div class="card-content">
+                                <h6>{{item.title}}</h6>
+                                <p>{{item.overview}}</p>
+                                <p *ngIf="HaveVoteCount(item)">Note :{{item.vote_average}}/10 ({{item.vote_count}} votes au total)</p>
+                                <p *ngIf="!HaveVoteCount(item)">Note : non noté </p>
+                            </div>
+                            <button type="button" (click)="setMovie(item)">Lire plus</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<!--description pour une série-->
+<div *ngIf="this.det.getType() === 'serie'">
+    <div id="Desc_rapide">
+        <div id="backpicture">
+            <img *ngIf="BackPicture(getSerie())" src="https://image.tmdb.org/t/p/original{{this.det.getSerie().backdrop_path}}"/>
+            <img *ngIf="!BackPicture(getSerie())" src="http://ekladata.com/la38o83JJQGb-8vyiv6b5g5Mih0/images.png"/>
+        </div>
+        <section id="ficheproduit">
+            <div>
+                <img class="affiche" *ngIf="PosterPicture(getSerie())" 
+                src="https://image.tmdb.org/t/p/original{{getSerie().poster_path}}" alt="image"/>
+                <img class="affiche" *ngIf="!PosterPicture(getSerie())"
+                src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png" alt="image not available"/>
+            </div>
+            <div>
+                <h4>{{this.det.getSerie().name}}</h4>
+                <ul class="list">
+                    <p>{{this.det.getSerie().first_air_date}}</p>
+                    <li *ngFor="let obj of getSerie().genres">{{obj.name}}</li>
+                    <li *ngIf="HaveDuration(getSerie())">Durée moyenne : {{this.det.getAverageTime()}} min/Episode</li>
+                </ul>
+                <p *ngIf="HaveVoteCount(getSerie())"><ng-template #t let-fill="fill">
+                    <span class="star" [class.full]="fill === 100">
+                    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                    </span>
+                    </ng-template>
+                    <ngb-rating [(rate)]="getSerie().vote_average" [starTemplate]="t" [readonly]="true" [max]="10"></ngb-rating><br/>
+                    (total de vote : {{this.det.getSerie().vote_count}} )
+                </p>
+                <p *ngIf="!HaveVoteCount(getSerie())">Note : non noté </p>
+                <p><b>Prix : 3.75 €/Saison</b></p>
+                <h5>Synopsis : </h5>
+                <p *ngIf="HaveDescription(getSerie())">{{this.det.getSerie().overview}}</p>
+                <p *ngIf="!HaveDescription(getSerie())">résumer indisponible</p>
+                <h5> Information sur le film: </h5>
+                <button id="reglcommande" [routerLink]="['/cart', { id:getSerie().id +'-serie'}]">Ajouter au panier</button>
+            </div>
+        </section>
+    </div>
+    <div class="fourretout"></div>
+
+    <div id="details">
+
+        <div id="casting" *ngIf="getCastingSerie().length !== 0">
+            <h2>Casting de la Série :</h2>
+            <section>
+                <ul>
+                    <li *ngFor="let item of getCastingSerie()">
+                        <div class="card">
+                            <img *ngIf="FacePicture(item)" src="https://image.tmdb.org/t/p/w220_and_h330_face{{item.profile_path}}" />
+                            <img *ngIf="!FacePicture(item)" src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png"/>
+                            <div>
+                                <h6>{{item.name}}</h6>
+                                <p>{{item.character}}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="commentaire" *ngIf="getReviewsSerie().total_pages !== 0">
+            <h2>Les commentaires :</h2>
+            <section>
+                <ul>
+                    <li *ngFor="let item of getReviewsSerie().results | slice:0:4">
+                        <img src="http://ekladata.com/52mR5fDUU4r8nkwWtJM2-j66gJQ/84164525-homme-personnage-visage-avatar-male-dessin-anime-vector-illustration.jpg"/>
+                        <h4>{{item.author}}</h4>
+                        <p class="content"><em>{{item.content}}</em></p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    
+        <div *ngIf="getRecommandedSerie().length !==0" id="Carrousel">
+            <h2>Vous aimez cette Série ? Vous aimerez peut-être :</h2>
+            <section>
+                <ul>
+                    <li *ngFor="let item of this.det.getRecommandedSerie()">
+                        <div class="card">
+                            <img *ngIf="PosterPicture(item)" src="https://image.tmdb.org/t/p/original{{item.poster_path}}" />
+                            <img *ngIf="!PosterPicture(item)" src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png"/>
+                            <div class="card-content">
+                                <h6>{{item.name}}</h6>
+                                <p>{{item.overview}}</p>
+                                <p *ngIf="HaveVoteCount(item)">Note :{{item.vote_average}}/10 ({{item.vote_count}} votes au total)</p>
+                                <p *ngIf="!HaveVoteCount(item)">Note : non noté </p>
+                            </div>
+                            <button type="button" (click)="setSerie(item)">Lire plus</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>

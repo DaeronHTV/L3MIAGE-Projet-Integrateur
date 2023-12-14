@@ -1,0 +1,72 @@
+<a [routerLink]="['/cart']"><button *ngIf="!(alreadyLogged | async)" id="profil">Mon Panier</button></a> 
+<button *ngIf="!(alreadyLogged | async)" (click)="loginGoogle()" class="bouton">Connexion</button>
+<nav *ngIf="alreadyLogged | async" id="boutons">  
+  <a [routerLink]="['/cart']"><button *ngIf="alreadyLogged | async" class="bouton"> Mon Panier</button></a>
+  <ul id="menu-accordeon" *ngIf=" (clientObs | async) as client">
+    <li><a href="#">{{client.displayName}}</a>
+      <ul>
+        <li><a href="#" (click)="openVerticallyCentered(content)">Mon Profile</a></li>
+        <li><a [routerLink]="['/login/commande']">Mon Historique</a></li>
+        <li><a href="#" (click)="logout()">Se Déconnecter</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Inscription</h4>
+  </div>
+  <div class="modal-body">
+    <div class="mx-auto" style="width: 250px; text-align: center;" >
+      <form #signInForm = "ngForm" (ngSubmit) = "onSubmit(signInForm)" novalidate *ngIf=" (clientObs | async) as client">
+          <label class="w-100">
+            Prénom<br>
+            <input type="text" name="prenom" ngModel ngModel="{{client.prenom}}" class="w-100">
+          </label>  
+          <label class="w-100">
+            Nom<br>
+            <input type="text" name="nom" ngModel ngModel="{{client.nom}}" class="w-100">
+          </label>
+          <label class="w-100">
+              Numéro de téléphone<br>
+              <input type="text" name="tel" ngModel ngModel="{{client.tel}}" class="w-100">
+          </label>
+          <br>
+          <div *ngIf="(clientObs | async).adresse != undefined">Adresse enregistrée: {{client.adresse}}</div>
+          <br>
+          <button *ngIf="(clientObs | async).adresse == undefined" type="button" class="btn btn-outline-primary" (click)="isCollapsedAdresse = !isCollapsedAdresse"
+            [attr.aria-expanded]="!isCollapsedAdresse" aria-controls="collapseExample" style="float: none; width: 200px;">
+              Rentrer votre adresse
+          </button>
+          <button *ngIf="(clientObs | async).adresse != undefined" type="button" class="btn btn-outline-primary" (click)="isCollapsedAdresse = !isCollapsedAdresse"
+            [attr.aria-expanded]="!isCollapsedAdresse" aria-controls="collapseExample" style="float: none; width: 200px;">
+              Changer votre adresse
+          </button>
+          <br>
+          <div id="adresseForm" [ngbCollapse]="isCollapsedAdresse">
+            <label class="w-100">
+              Adresse<br>
+            <input type="text" name="adresse" ngModel class="w-100">
+            </label>
+            <br>
+            <label class="w-100">
+                Code Postal<br>
+                <input type="text" name="codePostal" ngModel class="w-100">
+            </label>
+            <br>
+            <label class="w-100">
+                Ville<br>
+                <input type="text" name="ville" ngModel class="w-100">
+            </label>
+            <br>
+          </div>
+          <br>
+          <div class="w-100">
+            <button [disabled]="!signInForm.valid" style="float: none;">Submit</button>
+            <button id="closeModal" type="button" class="btn btn-light" (click)="modal.close('Close click')" style="display: none;">Close</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+<button id="buttonModal" class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)" style="display: none;">Modal vertically centered</button>

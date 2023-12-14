@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="36">
+    <nom>Chocolat Chaud</nom>
+    <type>Boisson</type>
+    <prix>2.9</prix>
+    <photo>https://photos.zodio.fr/zodio-magento/sheet_thematic/1/1539009506_10131479_Z-600x450.jpg</photo>
+    <ingredients>Lait</ingredients>
+    <ingredients>Cacao</ingredients>
+    <ingredients>Guimauve</ingredients>
+</plat>

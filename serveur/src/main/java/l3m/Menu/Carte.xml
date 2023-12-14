@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<carte id="1">
+    <plat id="0">
+        <nom>Salade De Thon</nom>
+        <type>Entree</type>
+        <prix>6.5</prix>
+        <photo>https://cdn.pratico-pratiques.com/app/uploads/sites/2/2018/08/29095920/salade-nicoise-au-thon.jpeg</photo>
+        <ingredients>Salade</ingredients>
+        <ingredients>Thon</ingredients>
+        <ingredients>Pomme de Terre</ingredients>
+        <ingredients>Tomate</ingredients>
+        <ingredients>Olive</ingredients>
+        <ingredients>Oeuf</ingredients>
+    </plat>
+    <plat id="1">
+        <nom>Salade Caesar</nom>
+        <type>Entree</type>
+        <prix>6.5</prix>
+        <photo>https://img.nutrissime.tv/uploads/hq6nosfoyd.jpg</photo>
+        <ingredients>Salade</ingredients>
+        <ingredients>Poulet</ingredients>
+        <ingredients>Parmesan</ingredients>
+        <ingredients>Croutons</ingredients>
+    </plat>
+    <plat id="2">
+        <nom>Salade à l'Italienne</nom>
+        <type>Entree</type>
+        <prix>6.5</prix>
+        <photo>https://www.menusalacartedezoe.com/wp-content/uploads/2018/06/Salade-italienne-roquette-et-coppa-3.jpg</photo>
+        <ingredients>Salade</ingredients>
+        <ingredients>Jambon Cru</ingredients>
+        <ingredients>Tomate</ingredients>
+        <ingredients>Parmesan</ingredients>
+    </plat>
+    <plat id="3">
+        <nom>Quiche Lorraine</nom>
+        <type>Entree</type>
+        <prix>3.5</prix>
+        <photo>https://www.regilait.com/wp-content/uploads/Recette-de-quiche-lorraine.jpg</photo>
+        <ingredients>Salade</ingredients>
+        <ingredients>Jambon Cru</ingredients>
+        <ingredients>Tomate</ingredients>
+        <ingredients>Parmesan</ingredients>
+    </plat>
+    <plat id="4">
+        <nom>Samoussas aux crevettes et au piment X5</nom>
+        <type>Entree</type>
+        <prix>5.0</prix>
+        <photo>https://img.cuisineaz.com/400x320/2016-03-06/i37644-samoussa-au-saumon-cream-cheese-et-roquette.jpg</photo>
+        <ingredients>Crevette</ingredients>
+        <ingredients>Piment</ingredients>
+    </plat>
+    <plat id="5">
+        <nom>Salade de pâtes</nom>
+        <type>Entree</type>
+        <prix>5.0</prix>
+        <photo>https://static.750g.com/images/600-600/9e6558fd7bd4d5cb7e45ce48f0c3d39f/comment-faire-une-salade-de-pates-comme-en-italie.jpg</photo>
+        <ingredients>Pates</ingredients>
+        <ingredients>Mozzarella</ingredients>
+        <ingredients>Tomate</ingredients>
+        <ingredients>Olive</ingredients>
+    </plat>
+    <plat id="6">
+        <nom>Macédoine de légumes</nom>
+        <type>Entree</type>
+        <prix>5.0</prix>
+        <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbqchouKgL2N7SILowKzUo3CiNTR4RDJ51NZJpXV78Yo-KNY4v&amp;usqp=CAU</photo>
+        <ingredients>Pomme de Terre</ingredients>
+        <ingredients>Carotte</ingredients>
+        <ingredients>Petit pois</ingredients>
+        <ingredients>Haricot vert</ingredients>
+    </plat>
+    <plat id="7">
+        <nom>Carottes rapées</nom>
+        <type>Entree</type>
+        <prix>3.5</prix>
+        <photo>https://epicetoorecettes.fr/img/recettes/grande/recette-carottes-rap-es-au-carvi.jpg</photo>
+        <ingredients>Pomme de Terre</ingredients>
+        <ingredients>Carotte</ingredients>
+        <ingredients>Petit pois</ingredients>
+        <ingredients>Haricot vert</ingredients>
+    </plat>
+    <plat id="8">
+        <nom>Melon et Jambon Cru</nom>
+        <type>Entree</type>
+        <prix>4.75</prix>
+        <photo>https://recettes.de/images/blogs/du-potager-a-la-marmite/melon-et-jambon-cru-idee-de-presentation-n-2.640x480.jpg</photo>
+        <ingredients>Melon</ingredients>
+        <ingredients>Jambon Cru</ingredients>
+    </plat>
+    <plat id="9">
+        <nom>Pastèque</nom>
+        <type>Entree</type>
+        <prix>3.5</prix>
+        <photo>https://p9.storage.canalblog.com/95/90/462641/78653999_o.jpg</photo>
+    </plat>
+    <plat id="10">
+        <nom>Pizza Margherita</nom>
+        <type>Plat</type>
+        <prix>8.9</prix>
+        <photo>https://www.bofrost.fr/medias/xpizza-margherita-09146-1.jpg-W720xH450R1.6,qcontext=bWFzdGVyfHByb2R1Y3QtaW1hZ2VzfDQ1MjEyOXxpbWFnZS9qcGVnfHByb2R1Y3QtaW1hZ2VzL2g2MS9oYWQvODgxNTg5NTI0ODkyNi5qcGd8ZGNkNGJmZGQ4N2Q3NmVkZjBiNTQ2OTA2Mzg5ZWI3MmEwMGU2NjgyYzYyMGIxMzNkMjg2ZDJhNTZhYzU3NGUzOQ.pagespeed.ic.4bC4smJbNR.jpg</photo>
+        <ingredients>Sauce tomate</ingredients>
+        <ingredients>Mozzarella</ingredients>
+        <ingredients>Olive</ingredients>
+        <ingredients>Origan</ingredients>
+    </plat>
+    <plat id="11">
+        <nom>Pizza 4 fromages</nom>
+        <type>Plat</type>
+        <prix>10.5</prix>
+        <photo>https://recette.supertoinette.com/152868/b/pizza-4-fromages.jpg</photo>
+        <ingredients>Sauce tomate</ingredients>
+        <ingredients>Parmesan</ingredients>
+        <ingredients>Mozzarella</ingredients>
+        <ingredients>Gorgonzola</ingredients>
+        <ingredients>Chèvre</ingredients>
+    </plat>
+    <plat id="12">
+        <nom>Pizza au saumon</nom>
+        <type>Plat</type>
+        <prix>10.25</prix>
+        <photo>https://www.lesavoureux.com/wp-content/uploads/2019/02/pizza-saumon.jpg</photo>
+        <ingredients>Saumon</ingredients>
+        <ingredients>Gruyère</ingredients>
+        <ingredients>Crème fraîche</ingredients>
+    </plat>
+    <plat id="13">
+        <nom>Risotto aux champignons</nom>
+        <type>Plat</type>
+        <prix>9.45</prix>
+        <photo>https://www.cookomix.com/wp-content/uploads/2018/04/risotto-poulet-champignons-thermomix-1280x720.jpg</photo>
+        <ingredients>Risotto</ingredients>
+        <ingredients>Champignon</ingredients>
+        <ingredients>Parmesan</ingredients>
+    </plat>
+    <plat id="14">
+        <nom>Lasagnes</nom>
+        <type>Plat</type>
+        <prix>9.5</prix>
+        <photo>https://img.cuisineaz.com/400x320/2016-11-14/i19403-lasgnes-bolognaise-facile.jpg</photo>
+        <ingredients>Pates de lasagnes</ingredients>
+        <ingredients>Tomate</ingredients>
+        <ingredients>Viande hachée</ingredients>
+        <ingredients>Béchamel</ingredients>
+        <ingredients>Gruyère</ingredients>
+    </plat>
+    <plat id="15">
+        <nom>Riz et Poulet Coco et Curry</nom>
+        <type>Plat</type>
+        <prix>12.5</prix>
+        <photo>https://www.recette360.com/wp-content/uploads/2018/04/Poulet-au-curry-et-lait-de-coco-cookeo.jpg</photo>
+        <ingredients>Riz</ingredients>
+        <ingredients>Poulet</ingredients>
+        <ingredients>Coco</ingredients>
+        <ingredients>Curry</ingredients>
+    </plat>
+    <plat id="16">
+        <nom>Tartiflette</nom>
+        <type>Plat</type>
+        <prix>11.5</prix>
+        <photo>https://www.cuisine-blog.fr/wp-content/uploads/2017/11/fotolia_60240140_subscription_xxl.jpg</photo>
+        <ingredients>Pomme de Terre</ingredients>
+        <ingredients>Lardons</ingredients>
+        <ingredients>Reblochon</ingredients>
+    </plat>
+    <plat id="17">
+        <nom>Couscous</nom>
+        <type>Plat</type>
+        <prix>9.9</prix>
+        <photo>https://cache.marieclaire.fr/data/photo/w1000_c17/cuisine/4l/couscous-facile.jpg</photo>
+        <ingredients>Semoule</ingredients>
+        <ingredients>Poulet</ingredients>
+        <ingredients>Merguez</ingredients>
+        <ingredients>Tomate</ingredients>
+        <ingredients>Carotte</ingredients>
+        <ingredients>Navets</ingredients>
+        <ingredients>Courgettes</ingredients>
+        <ingredients>Pois chiches</ingredients>
+    </plat>
+    <plat id="18">
+        <nom>Sushi</nom>
+        <type>Plat</type>
+        <prix>4.9</prix>
+        <photo>https://www.atelierdeschefs.com/media/recette-e12941-sushi-de-saumon-fume-et-creme-acidulee.jpg</photo>
+        <ingredients>Riz</ingredients>
+        <ingredients>Saumon</ingredients>
+    </plat>
+    <plat id="19">
+        <nom>Burger au bacon et cheddar</nom>
+        <type>Plat</type>
+        <prix>7.8</prix>
+        <photo>https://kiwings-images-prod.s3-eu-west-1.amazonaws.com/recipes/56c72437724f5.jpeg</photo>
+        <ingredients>Steak haché</ingredients>
+        <ingredients>Bacon</ingredients>
+        <ingredients>Cheddar</ingredients>
+        <ingredients>Oignons</ingredients>
+        <ingredients>Tomate</ingredients>
+        <ingredients>Salade</ingredients>
+        <ingredients>Ketchup</ingredients>
+    </plat>
+    <plat id="20">
+        <nom>Frites</nom>
+        <type>Plat</type>
+        <prix>3.5</prix>
+        <photo>https://i.f1g.fr/media/madame/orig/sites/default/files/img/2017/11/la-frite-est-elle-belge-ou-francaise-.jpg</photo>
+    </plat>
+    <plat id="21">
+        <nom>Tiramisu au Spéculoos</nom>
+        <type>Dessert</type>
+        <prix>5.2</prix>
+        <photo>https://odelices.ouest-france.fr/images/recettes/tiramisu_aux_speculoos-970x1024.jpg</photo>
+        <ingredients>Mascarpone</ingredients>
+        <ingredients>Cafe</ingredients>
+        <ingredients>Spéculoos</ingredients>
+    </plat>
+    <plat id="22">
+        <nom>Mousse au chocolat</nom>
+        <type>Dessert</type>
+        <prix>3.9</prix>
+        <photo>https://cdn.pratico-pratiques.com/app/uploads/sites/2/2018/08/29100453/mousse-au-chocolat-et-baileys.jpeg</photo>
+    </plat>
+    <plat id="23">
+        <nom>Crumble aux Pommes</nom>
+        <type>Dessert</type>
+        <prix>5.3</prix>
+        <photo>https://img.cuisineaz.com/400x320/2013-12-20/i95136-crumble-facile-aux-pommes-express.jpg</photo>
+        <ingredients>Pomme</ingredients>
+        <ingredients>Cannelle</ingredients>
+    </plat>
+    <plat id="24">
+        <nom>Crêpes au sucre</nom>
+        <type>Dessert</type>
+        <prix>2.0</prix>
+        <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTZ3c5nYyF4A9DJmtQcBYandPu29Sszk0kVRZ6xA5rY-iKytMPm&amp;usqp=CAU</photo>
+    </plat>
+    <plat id="25">
+        <nom>Crêpes au Nutella</nom>
+        <type>Dessert</type>
+        <prix>3.0</prix>
+        <photo>https://jevouschouchoute.fr/wp-content/uploads/2017/01/nutella-tefal2-jvc-jevouschouchoute.png</photo>
+    </plat>
+    <plat id="26">
+        <nom>Crêpes à la confiture de fraise</nom>
+        <type>Dessert</type>
+        <prix>3.0</prix>
+        <photo>https://i.pinimg.com/originals/91/78/5b/91785b29c44be3c55fd71025a35f842a.jpg</photo>
+    </plat>
+    <plat id="27">
+        <nom>Gauffre au sucre</nom>
+        <type>Dessert</type>
+        <prix>3.0</prix>
+        <photo>https://www.generation-souvenirs.com/23204-thickbox_default/gaufre-au-sucre.jpg</photo>
+    </plat>
+    <plat id="28">
+        <nom>Gauffre au Nutella</nom>
+        <type>Dessert</type>
+        <prix>4.0</prix>
+        <photo>https://rankeat.fr/uploads/categ_plats/1051/1602/557/562_534/1.jpg</photo>
+    </plat>
+    <plat id="29">
+        <nom>Gauffre à la confiture de fraise</nom>
+        <type>Dessert</type>
+        <prix>4.0</prix>
+        <photo>https://thumbs.dreamstime.com/b/gaufres-douces-viennoises-avec-de-la-confiture-de-fraise-68053564.jpg</photo>
+    </plat>
+    <plat id="30">
+        <nom>Tartelette aux fraises</nom>
+        <type>Dessert</type>
+        <prix>2.9</prix>
+        <photo>https://empreintesucree.fr/wp-content/uploads/2017/05/1-tartelettes-fraises-recette-patisserie-empreinte-sucree.jpg</photo>
+    </plat>
+    <plat id="31">
+        <nom>Tartelette aux pommes</nom>
+        <type>Dessert</type>
+        <prix>2.9</prix>
+        <photo>https://p5.storage.canalblog.com/53/15/233083/98769202.jpg</photo>
+    </plat>
+    <plat id="32">
+        <nom>Pizza dessert</nom>
+        <type>Dessert</type>
+        <prix>5.5</prix>
+        <photo>https://www.sparksandbloom.com/wp-content/uploads/2017/06/Feu-de-camps-Pizza.jpg</photo>
+        <ingredients>Nutella</ingredients>
+        <ingredients>Coulis de chocolat</ingredients>
+        <ingredients>Fraises</ingredients>
+        <ingredients>Guimauve</ingredients>
+    </plat>
+    <plat id="33">
+        <nom>Salade de Fruits</nom>
+        <type>Dessert</type>
+        <prix>4.9</prix>
+        <photo>https://cdn.pratico-pratiques.com/app/uploads/sites/3/2019/11/27115447/salade-de-fruits.jpg</photo>
+        <ingredients>Cerise</ingredients>
+        <ingredients>Kiwi</ingredients>
+        <ingredients>Banane</ingredients>
+        <ingredients>Raisin</ingredients>
+        <ingredients>Framboise</ingredients>
+        <ingredients>Pomme</ingredients>
+    </plat>
+    <plat id="34">
+        <nom>Crème brulée</nom>
+        <type>Dessert</type>
+        <prix>4.5</prix>
+        <photo>https://assets.afcdn.com/recipe/20161201/4190_w648h414c1cx2705cy1803.jpg</photo>
+    </plat>
+    <plat id="35">
+        <nom>Café</nom>
+        <type>Boisson</type>
+        <prix>1.5</prix>
+        <photo>https://thumbs.dreamstime.com/b/caf%C3%A9-%C3%A0-emporter-ouvert-dans-le-support-le-couvercle-est-pr%C3%A8s-27962794.jpg</photo>
+    </plat>
+    <plat id="36">
+        <nom>Chocolat Chaud</nom>
+        <type>Boisson</type>
+        <prix>2.9</prix>
+        <photo>https://photos.zodio.fr/zodio-magento/sheet_thematic/1/1539009506_10131479_Z-600x450.jpg</photo>
+        <ingredients>Lait</ingredients>
+        <ingredients>Cacao</ingredients>
+        <ingredients>Guimauve</ingredients>
+    </plat>
+    <plat id="37">
+        <nom>Coca-Cola</nom>
+        <type>Boisson</type>
+        <prix>2.3</prix>
+        <photo>https://www.staples.fr/content/images/product/72255-00H_1_xnl.jpg</photo>
+    </plat>
+    <plat id="38">
+        <nom>Oasis Tropical</nom>
+        <type>Boisson</type>
+        <prix>2.3</prix>
+        <photo>https://www.clicmarket.fr/4567-large_default/24-canettes-d-oasis-tropical-33-cl.jpg</photo>
+    </plat>
+    <plat id="39">
+        <nom>Sprite</nom>
+        <type>Boisson</type>
+        <prix>2.3</prix>
+        <photo>https://www.jpg.fr/content/images/product/56351-00J_1_xnl.jpg</photo>
+    </plat>
+    <plat id="40">
+        <nom>Perrier</nom>
+        <type>Boisson</type>
+        <prix>2.0</prix>
+        <photo>https://prod.isg.bruneau.media/OMM/Images_Basse_Definition/ZoomHD/16/91/16919.jpg?width=2000&amp;height=2000&amp;mode=Default&amp;quality=85&amp;scale=upscalecanvas</photo>
+    </plat>
+    <plat id="41">
+        <nom>Thé à la menthe</nom>
+        <type>Boisson</type>
+        <prix>2.9</prix>
+        <photo>https://www.entreprendre.fr/wp-content/uploads/visu_1444902404.jpg</photo>
+    </plat>
+    <plat id="42">
+        <nom>Jus d'Orange</nom>
+        <type>Boisson</type>
+        <prix>2.3</prix>
+        <photo>https://cdn.metro-group.com/fr/fr_pim_397337001002_01.png?w=400&amp;h=400&amp;mode=pad</photo>
+    </plat>
+    <plat id="43">
+        <nom>Jus de Pommes</nom>
+        <type>Boisson</type>
+        <prix>2.3</prix>
+        <photo>https://cdn.metro-group.com/fr/fr_pim_397338001002_01.png?w=400&amp;h=400&amp;mode=pad</photo>
+    </plat>
+    <plat id="44">
+        <nom>Ice-Tea</nom>
+        <type>Boisson</type>
+        <prix>2.3</prix>
+        <photo>https://prod.isg.bruneau.media/OMM/Images_Basse_Definition/ZoomHD/70/81/98/708198.jpg?width=2000&amp;height=2000&amp;mode=Default&amp;quality=85&amp;scale=upscalecanvas</photo>
+    </plat>
+    <plat id="45">
+        <nom>Mojito</nom>
+        <type>Boisson</type>
+        <prix>6.5</prix>
+        <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6Lrs4kWlsP2Li9qJ5jJ5gQ3l0Xvz3DZjrL3CWJPoRwOP4ULYz&amp;usqp=CAU</photo>
+        <ingredients>Rhum</ingredients>
+        <ingredients>Menthe</ingredients>
+        <ingredients>Eau gazeuse</ingredients>
+        <ingredients>Citron</ingredients>
+        <ingredients>Sucre</ingredients>
+    </plat>
+    <plat id="46">
+        <nom>Redbull</nom>
+        <type>Boisson</type>
+        <prix>2.9</prix>
+        <photo>https://www.carrefour.fr/media/540x540/Photosite/PGC/BOISSONS/9002490233655_PHOTOSITE_20170919_161101_4.jpg?placeholder=1</photo>
+    </plat>
+    <plat id="47">
+        <nom>Bière Heineken</nom>
+        <type>Boisson</type>
+        <prix>3.5</prix>
+        <photo>https://www.clicmarket.fr/2925-large_default/24-canettes-de-biere-blonde-5-heineken-50-cl.jpg</photo>
+    </plat>
+    <plat id="48">
+        <nom>Piña Colada</nom>
+        <type>Boisson</type>
+        <prix>6.5</prix>
+        <photo>https://t2.uc.ltmcdn.com/fr/images/4/3/1/comment_faire_une_pina_colada_sans_alcool_1134_orig.jpg</photo>
+        <ingredients>Rhum</ingredients>
+        <ingredients>Jus d'Ananas</ingredients>
+        <ingredients>Crème Coco</ingredients>
+    </plat>
+    <plat id="49">
+        <nom>Cocktail Sex On The Beach</nom>
+        <type>Boisson</type>
+        <prix>6.4</prix>
+        <photo>https://keeprecipes.com/sites/keeprecipes/files/imagecache/recipe_large/sex-on-the-beach-cocktail.jpg</photo>
+        <ingredients>Vodka</ingredients>
+        <ingredients>Jus d'Orange</ingredients>
+        <ingredients>Jus d'Ananas</ingredients>
+        <ingredients>Fruit de la passion</ingredients>
+        <ingredients>Papaye</ingredients>
+        <ingredients>Pêche</ingredients>
+        <ingredients>Melon</ingredients>
+    </plat>
+    <plat id="50">
+        <nom>Cocktail Paradise Dream</nom>
+        <type>Boisson</type>
+        <prix>5.9</prix>
+        <photo>https://ekladata.com/_fyIyzLGMXpDJZnSbyLAY1EAFUM.png</photo>
+        <ingredients>Jus d'Ananas</ingredients>
+        <ingredients>Fraises</ingredients>
+        <ingredients>Framboise</ingredients>
+        <ingredients>Grenadine</ingredients>
+        <ingredients>Pêche</ingredients>
+    </plat>
+    <plat id="51">
+        <nom>Cocktail Caipirinha</nom>
+        <type>Boisson</type>
+        <prix>6.5</prix>
+        <photo>https://i0.wp.com/www.letopdelhumour.fr/wp-content/uploads/2017/12/caipirinha-cocktail.jpg?resize=400%2C300</photo>
+        <ingredients>Cachaca</ingredients>
+        <ingredients>Citron</ingredients>
+    </plat>
+    <plat id="52">
+        <nom>Cocktail Koyo</nom>
+        <type>Boisson</type>
+        <prix>5.7</prix>
+        <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoeXmQWyxq09JtNlEnBLBLQfWKIT7PI4dXPqMSMDWBJidoLh9K&amp;usqp=CAU</photo>
+        <ingredients>Jus d'Ananas</ingredients>
+        <ingredients>Fraises</ingredients>
+        <ingredients>Melon</ingredients>
+        <ingredients>Banane</ingredients>
+        <ingredients>Vanille</ingredients>
+    </plat>
+</carte>

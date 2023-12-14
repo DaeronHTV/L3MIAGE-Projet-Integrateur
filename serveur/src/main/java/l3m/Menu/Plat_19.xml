@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="19">
+    <nom>Burger au bacon et cheddar</nom>
+    <type>Plat</type>
+    <prix>7.8</prix>
+    <photo>https://kiwings-images-prod.s3-eu-west-1.amazonaws.com/recipes/56c72437724f5.jpeg</photo>
+    <ingredients>Steak haché</ingredients>
+    <ingredients>Bacon</ingredients>
+    <ingredients>Cheddar</ingredients>
+    <ingredients>Oignons</ingredients>
+    <ingredients>Tomate</ingredients>
+    <ingredients>Salade</ingredients>
+    <ingredients>Ketchup</ingredients>
+</plat>

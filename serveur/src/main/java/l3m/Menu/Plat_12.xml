@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="12">
+    <nom>Pizza au saumon</nom>
+    <type>Plat</type>
+    <prix>10.25</prix>
+    <photo>https://www.lesavoureux.com/wp-content/uploads/2019/02/pizza-saumon.jpg</photo>
+    <ingredients>Saumon</ingredients>
+    <ingredients>Gruyère</ingredients>
+    <ingredients>Crème fraîche</ingredients>
+</plat>

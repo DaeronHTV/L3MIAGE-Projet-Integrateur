@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="1">
+    <nom>Salade Caesar</nom>
+    <type>Entree</type>
+    <prix>6.5</prix>
+    <photo>https://img.nutrissime.tv/uploads/hq6nosfoyd.jpg</photo>
+    <ingredients>Salade</ingredients>
+    <ingredients>Poulet</ingredients>
+    <ingredients>Parmesan</ingredients>
+    <ingredients>Croutons</ingredients>
+</plat>

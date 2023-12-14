@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="51">
+    <nom>Cocktail Caipirinha</nom>
+    <type>Boisson</type>
+    <prix>6.5</prix>
+    <photo>https://i0.wp.com/www.letopdelhumour.fr/wp-content/uploads/2017/12/caipirinha-cocktail.jpg?resize=400%2C300</photo>
+    <ingredients>Cachaca</ingredients>
+    <ingredients>Citron</ingredients>
+</plat>

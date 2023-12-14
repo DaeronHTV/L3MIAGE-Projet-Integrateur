@@ -1,0 +1,18 @@
+#menu-accordeon {z-index: 100;padding:0;margin:0;list-style:none;text-align: center;width: 150px;float: right;}
+#menu-accordeon ul {z-index: 100;position: absolute;padding:0;margin:0;text-align: center;width: 149px;padding-left: 0;}
+#menu-accordeon li {background-color:#729EBF; background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+   background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);border-radius: 6px;margin-bottom:2px;
+   box-shadow: 0px 3px 3px #999;border:solid 1px #333A40;padding:0;margin: 0;}
+#menu-accordeon li li {max-height:0;overflow: hidden;transition: all 1s;border-radius:0;background: #444;box-shadow: none;border:none;margin:0;}
+#menu-accordeon a {display:block;text-decoration: none;color: #fff;padding: 8px 0;font-family: verdana;font-size:0.9em}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {font-size:1em}
+#menu-accordeon li:hover {background: #729EBF;border-radius: 5px;}
+#menu-accordeon li li:hover {background: #999;}
+#menu-accordeon ul li:last-child {border-radius: 0 0 6px 6px;border:none;}
+#menu-accordeon ul li:first-child{border-radius: 6px 6px 0 0;}
+#menu-accordeon li:hover li {max-height: 15em;}
+button{background-color:#729EBF; background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+   background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);color: white;border-radius: 6px;margin-bottom:2px;
+   box-shadow: 0px 3px 3px #999;border:solid 1px #333A40;text-align: center;font-size: 0.9em;height: 39px;font-family: verdana;
+   width: 100px;float: right;margin-right: 10px;}
+button:hover {background: #729EBF;border-radius: 5px;}

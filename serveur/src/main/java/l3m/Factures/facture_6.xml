@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<facture id="6">
+    <date>2020/05/04 18:02:43</date>
+    <nom>Oubari</nom>
+    <prénom>Mohammad</prénom>
+    <adresse>14 Rue Jean Louis 26000 Valence</adresse>
+    <email>testfirebasel3miage@gmail.com</email>
+    <Téléphone>0642987800</Téléphone>
+    <plats>
+        <plat>Jus d'Orange    : 2.3 €</plat>
+    </plats>
+    <films>
+        <film>Ad Astra   : 3.75 €</film>
+    </films>
+    <prix>6.05 €</prix>
+</facture>

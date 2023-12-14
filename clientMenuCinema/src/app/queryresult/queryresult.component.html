@@ -1,0 +1,312 @@
+<div id="retAcc" [routerLink]="['']">Retour à l'accueil</div>
+<router-outlet></router-outlet>
+
+<div class="page">
+  <h1>Résultats de la recherche</h1>
+  <div class="filtre">
+    <label>
+      <div class="categories">
+        <div class="box">
+          <input type="radio" id="film" name="film" value="film" (click)="this.srch.setCategorie('film')">
+          <label for="film">
+            <h2>Films</h2>
+          </label>
+          <input type="radio" id="serie" name="serie" value="serie" (click)="this.srch.setCategorie('serie')">
+          <label for="serie">
+            <h2>Séries</h2>
+          </label>
+          <input type="radio" id="plat" name="plat" value="plat" (click)="this.srch.setCategorie('plat')">
+          <label for="plat">
+            <h2>Plats</h2>
+          </label>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+
+
+<!--Affichage des films de la requete-->
+<div [ngSwitch]="this.srch.getCategorie()">
+  <div *ngSwitchDefault>
+    <ul class="noresult" *ngIf="!this.srch.ResultatMovie()">
+      <h2>Désolé, il n'y a pas de films correspondant à votre recherche ! </h2>
+    </ul>
+    <ul *ngIf="this.srch.ResultatMovie()">
+      <div class="trifiltre">
+        <select name="typetri" #typetri>
+          <option value="popularitedec">Tri par popularité (+/-)</option>
+          <option value="popularitecro">Tri par popularité (-/+)</option>
+          <option value="preferenceasc">Note ascendante</option>
+          <option value="preferencedes">Note descendante</option>
+          <option value="anneedes">Date de sortie descendante</option>
+          <option value="anneeasc">Date de sortie ascendante</option>
+          <option value="alphaAZ">Tri par ordre Alphabétique (A-Z)</option>
+          <option value="alphaZA">Tri par ordre Alphabétique (Z-A)</option>
+        </select>
+        <button class="tripar" type="submit"
+          (click)="this.srch.tri(typetri.value, this.srch.getMovieResponse())">Trier</button>
+      </div>
+      <ul class=items>
+        <div *ngFor="let item of this.srch.getMovieResponse().results">
+          <div class="card">
+            <div class="contenant">
+              <img class="poster" *ngIf="PosterPicture(item)"
+                src="https://image.tmdb.org/t/p/original{{item.poster_path}}" height="200" width="150">
+              <div class="texte_centrer" *ngIf="OriginalLanguage(item)">
+                <h6>{{item.original_language}}</h6>
+              </div>
+              <img class="poster" *ngIf="!PosterPicture(item)"
+                src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png" height="200" width="150" />
+            </div>
+            <div class="card-content">
+              <h6>{{item.title}}</h6>
+              <li *ngIf="Adult(item)">
+                <img class="poster"
+                  src="https://st4.depositphotos.com/3047529/28513/i/450/depositphotos_285133834-stock-photo-age-restriction-sign.jpg"
+                  alt="adultes" height="30" width="30" />
+              </li>
+              <p *ngIf="Description(item)">{{item.overview}}</p>
+              <p *ngIf="!Description(item)">Pas de description disponible.</p>
+              <ul>
+                <li *ngIf="PublishedYear(item)">Date de sortie : {{item.release_date}}</li>
+                <li *ngIf="!PublishedYear(item)">Date de sortie : Non définie</li>
+                <li *ngIf="Vote(item)">
+                  <p>Note : <ng-template #t let-fill="fill">
+                      <span class="star" [class.full]="fill === 100">
+                        <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                      </span>
+                    </ng-template>
+                    <ngb-rating [(rate)]="item.vote_average" [starTemplate]="t" [readonly]="true" [max]="10">
+                    </ngb-rating>
+
+                  </p>
+                </li>
+                <li *ngIf="!Vote(item)">Note : Non noté</li>
+              </ul>
+            </div>
+            <button type="submit" (click)="setMovie(item)" [routerLink]="['/details']">Lire plus</button>
+          </div>
+        </div>
+      </ul>
+      <div class="pagination1">
+        <div class=pagination>
+          <a (click)="setCurrentPage(this.currentpage-5)">
+            <<</a> <a (click)="setCurrentPage(this.currentpage-1)">Précédent
+          </a>
+          <!--<a class="active" href="#">1</a>-->
+          <a *ngFor="let item of pages" (click)="setCurrentPage(item)">{{item}}</a>
+          <a (click)="setCurrentPage(this.currentpage+1)">Suivant</a>
+          <a (click)="setCurrentPage(this.currentpage+5)">>></a>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+  <!--Affichage des séries-->
+  <div *ngSwitchCase="'serie'">
+    <ul class="noresult" *ngIf="!this.srch.ResultatSerie()">
+      <h2>Désolé, il n'y a pas de séries correspondant à votre recherche ! </h2>
+    </ul>
+    <ul *ngIf="this.srch.ResultatSerie()">
+      <div class="trifiltre">
+        <select name="typetri" #typetri>
+          <option value="popularitedec">Tri par popularité (+/-)</option>
+          <option value="popularitecro">Tri par popularité (-/+)</option>
+          <option value="preferenceasc">Note ascendante</option>
+          <option value="preferencedes">Note descendante</option>
+          <option value="anneedes">Date de sortie descendante</option>
+          <option value="anneeasc">Date de sortie ascendante</option>
+          <option value="alphaAZ">Tri par ordre Alphabétique (A-Z)</option>
+          <option value="alphaZA">Tri par ordre Alphabétique (Z-A)</option>
+        </select>
+        <button class="tripar" type="submit"
+          (click)="this.srch.tri(typetri.value, this.srch.getTVResponse())">Trier</button>
+      </div>
+      <ul class=items>
+        <div *ngFor="let item of this.srch.getTVResponse().results">
+          <div class="card">
+            <div class="contenant">
+              <img class="poster" *ngIf="PosterPicture(item)"
+                src="https://image.tmdb.org/t/p/original{{item.poster_path}}" height="200" width="150">
+              <div class="texte_centrer" *ngIf="OriginalLanguage(item)">
+                <h6>{{item.original_language}}</h6>
+              </div>
+              <img class="poster" *ngIf="!PosterPicture(item)"
+                src="http://ekladata.com/JznKgO62AVF12CUwg3S-dvXh8y8/notavailable.png" height="200" width="150" />
+            </div>
+            <div class="card-content">
+              <h5>{{item.name}}</h5>
+              <img class="poster" *ngIf="Adult(item)"
+                src="https://st4.depositphotos.com/3047529/28513/i/450/depositphotos_285133834-stock-photo-age-restriction-sign.jpg"
+                alt="adultes" height="30" width="30" />
+              <p *ngIf="Description(item)">{{item.overview}}</p>
+              <p *ngIf="!Description(item)">No Description available</p>
+              <ul>
+                <li *ngIf="FirstAirDate(item)">Date de sortie : {{item.first_air_date}}</li>
+                <li *ngIf="!FirstAirDate(item)">Date de sortie : Non définie</li>
+                <li *ngIf="Vote(item)">Note :<ng-template #t let-fill="fill">
+                    <span class="star" [class.full]="fill === 100">
+                      <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                    </span>
+                  </ng-template>
+                  <ngb-rating [(rate)]="item.vote_average" [starTemplate]="t" [readonly]="true" [max]="10"></ngb-rating>
+                </li>
+                <li *ngIf="!Vote(item)">Note : Non noté</li>
+              </ul>
+            </div>
+            <button type="submit" (click)="setSerie(item)" [routerLink]="['/details']">Lire plus</button>
+          </div>
+        </div>
+      </ul>
+      <div class="pagination1">
+        <div class=pagination>
+          <a (click)="setCurrentPage(this.currentpage-5)">
+            <<</a> <a (click)="setCurrentPage(this.currentpage-1)">Précédent
+          </a>
+          <!--<a class="active" href="#">1</a>-->
+          <a *ngFor="let item of pages" (click)="setCurrentPage(item)">{{item}}</a>
+          <a (click)="setCurrentPage(this.currentpage+1)">Suivant</a>
+          <a (click)="setCurrentPage(this.currentpage+5)">>></a>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+  <!--Affichage des plats-->
+  <div *ngSwitchCase="'plat'">
+    <!--<ul class="noresult" *ngIf="!this.srch.ResultatPlat()">
+      <h5>Désolé, il n'y a pas de plats correspondant à votre recherche ! </h5>
+    </ul>
+    <ul *ngIf="this.srch.ResultatPlat()">-->
+      <div class="filtre">
+        <label>
+          <div class="type">
+            <div class="box2">
+              <input type="radio" id="entree" name="entree" value="entree" (click)="this.srch.setType('entree')">
+              <label for="entree">
+                <h3>Entrées</h3>
+              </label>
+            </div>
+            <div class="box2">
+              <input type="radio" id="platt" name="platt" value="platt" (click)="this.srch.setType('platt')">
+              <label for="platt">
+                <h3>Plats</h3>
+              </label>
+            </div>
+            <div class="box2">
+              <input type="radio" id="dessert" name="dessert" value="dessert" (click)="this.srch.setType('dessert')">
+              <label for="dessert">
+                <h3>Desserts</h3>
+              </label>
+            </div>
+            <div class="box2">
+              <input type="radio" id="boisson" name="boisson" value="boisson" (click)="this.srch.setType('boisson')">
+              <label for="boisson">
+                <h3>Boissons</h3>
+              </label>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="trifiltre">
+        <select name="typetri" #typetri>
+          <option value="alphaAZ">Tri par ordre Alphabétique (A-Z)</option>
+          <option value="alphaZA">Tri par ordre Alphabétique (Z-A)</option>
+          <option value="prixcro">Tri par prix croissant</option>
+          <option value="prixdesc">Tri par prix décroissant</option>
+        </select>
+        <button class="tripar" type="submit"
+          (click)="this.srch.tri_plat(typetri.value, this.srch.getPlat())">Trier</button>
+      </div>
+      <div [ngSwitch]="this.srch.getType()">
+        <div *ngSwitchDefault>
+          
+          <ul class=plats>
+            <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Entree').listplat">
+              <div>
+                <img class="imagePlat" src="{{item.photo}}" />
+                <h4>{{item.nom}}</h4>
+                <h5>Prix: {{item.prix}} €</h5>
+                <div *ngIf="Ingredient(item)">
+                  <h6>Ingrédients:</h6>
+                  <div class="ings">
+                    <div class="ing" *ngFor="let ing of item.ingredients">
+                      <i>- {{ing.ingredient}} </i>
+                    </div>
+                  </div>
+                </div>
+                <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                    au panier</button></a>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div *ngSwitchCase="'platt'">
+          <ul class=plats>
+            <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Plat').listplat">
+              <div>
+                <img class="imagePlat" src="{{item.photo}}" />
+                <h4>{{item.nom}}</h4>
+                <h5>Prix: {{item.prix}} €</h5>
+                <div *ngIf="Ingredient(item)">
+                  <h6>Ingrédients:</h6>
+                  <div class="ings">
+                    <div class="ing" *ngFor="let ing of item.ingredients">
+                      <i>- {{ing.ingredient}} </i>
+                    </div>
+                  </div>
+                </div>
+                <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                    au panier</button></a>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <div *ngSwitchCase="'dessert'">
+          <ul class=plats>
+            <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Dessert').listplat">
+              <div>
+                <img class="imagePlat" src="{{item.photo}}" />
+                <h4>{{item.nom}}</h4>
+                <h5>Prix: {{item.prix}} €</h5>
+                <div *ngIf="Ingredient(item)">
+                  <h6>Ingrédients:</h6>
+                  <div class="ings">
+                    <div class="ing" *ngFor="let ing of item.ingredients">
+                      <i>- {{ing.ingredient}} </i>
+                    </div>
+                  </div>
+                </div>
+                <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                    au panier</button></a>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <div *ngSwitchCase="'boisson'">
+          <ul class=plats ngif="Resultat()">
+            <div class="plat" *ngFor="let item of this.srch.getPlatResponse('Boisson').listplat">
+              <div>
+                <img class="imagePlat" src="{{item.photo}}" />
+                <h4>{{item.nom}}</h4>
+                <h5>Prix: {{item.prix}} €</h5>
+                <div *ngIf="Ingredient(item)">
+                  <h6>Ingrédients:</h6>
+                  <div class="ings">
+                    <div class="ing" *ngFor="let ing of item.ingredients">
+                      <i>- {{ing.ingredient}} </i>
+                    </div>
+                  </div>
+                </div>
+                <a [routerLink]="['/cart', { id:item.id + '-plat' }]"><button class="btn btn-success pull-right">Ajouter
+                    au panier</button></a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    <!--</ul>-->
+  </div>
+</div>

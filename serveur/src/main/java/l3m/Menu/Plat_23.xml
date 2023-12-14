@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="23">
+    <nom>Crumble aux Pommes</nom>
+    <type>Dessert</type>
+    <prix>5.3</prix>
+    <photo>https://img.cuisineaz.com/400x320/2013-12-20/i95136-crumble-facile-aux-pommes-express.jpg</photo>
+    <ingredients>Pomme</ingredients>
+    <ingredients>Cannelle</ingredients>
+</plat>

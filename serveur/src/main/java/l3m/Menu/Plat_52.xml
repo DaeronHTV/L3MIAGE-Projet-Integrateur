@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="52">
+    <nom>Cocktail Koyo</nom>
+    <type>Boisson</type>
+    <prix>5.7</prix>
+    <photo>https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRoeXmQWyxq09JtNlEnBLBLQfWKIT7PI4dXPqMSMDWBJidoLh9K&amp;usqp=CAU</photo>
+    <ingredients>Jus d'Ananas</ingredients>
+    <ingredients>Fraises</ingredients>
+    <ingredients>Melon</ingredients>
+    <ingredients>Banane</ingredients>
+    <ingredients>Vanille</ingredients>
+</plat>

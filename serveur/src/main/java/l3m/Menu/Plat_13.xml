@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plat id="13">
+    <nom>Risotto aux champignons</nom>
+    <type>Plat</type>
+    <prix>9.45</prix>
+    <photo>https://www.cookomix.com/wp-content/uploads/2018/04/risotto-poulet-champignons-thermomix-1280x720.jpg</photo>
+    <ingredients>Risotto</ingredients>
+    <ingredients>Champignon</ingredients>
+    <ingredients>Parmesan</ingredients>
+</plat>

@@ -1,0 +1,7 @@
+@font-face{font-family: "Adventure";src: url('../package/font/Adventure.otf') format('truetype');}
+#formulaire{width: 65%;margin: auto;background-color: white;min-height: 800px;border: 5px solid rgb(69, 78, 87);}
+#formulaire *{margin-left: 15px;}
+#formulaire p{margin-top: 10px;}
+h2{padding-top: 15px;font-family: Adventure;font-weight: bold;font-size: 40px;}
+input{width: 75%;background-color: lightgray;border-radius: 5px;}
+textarea{resize: none;width: 75%;overflow-y: scroll;min-height: 200px;background-color: lightgray;}
